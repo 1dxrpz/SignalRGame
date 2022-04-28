@@ -1,0 +1,11 @@
+﻿@model SignalRGame.Models.Player
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="main">
+	<form method="post" asp-action="Index" asp-controller="Game" enctype="multipart/form-data">
+		<input name="username" asp-for="Name" name="name" />
+		<button class="btn-primary btn" type="submit">Join</button>
+	</form>
+</div>

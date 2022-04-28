@@ -1,0 +1,32 @@
+﻿@model SignalRGame.Models.Player
+
+
+<div id="player_username">@Model.Name</div>
+<div class="players_list">
+	<table class="players" visible="false">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+		</tr>
+	</table>
+</div>
+<div class="chat">
+	<div class="messages"></div>
+</div>
+<input class="chat_input" />
+<div class="enjine_wrapper">
+	<div class="loader">
+		<div class="wrapper">
+			<div class="logo">EnJine.js</div>
+			<div class="loading_bar"></div>
+		</div>
+	</div>
+	<canvas id="canvas"></canvas>
+</div>
+
+
+@section Scripts{
+	<script src="~/js/signalr/dist/browser/signalr.js"></script>
+	<script type="text/javascript" src="https://dxrpz.herokuapp.com/Enjine/v1.2"></script>
+	<script src="~/js/game.js"></script>
+}
